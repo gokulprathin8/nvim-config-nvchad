@@ -15,6 +15,7 @@ if not vim.loop.fs_stat(lazypath) then
   require("core.bootstrap").lazy(lazypath)
 end
 
+vim.opt.guicursor = "n:block,i:block,r:block,c:block,v:block,a:block"
 
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)

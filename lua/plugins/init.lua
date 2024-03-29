@@ -4,6 +4,14 @@ local default_plugins = {
   "nvim-lua/plenary.nvim",
   "ThePrimeagen/harpoon",
   "mhartington/formatter.nvim",
+  "nvim-treesitter/nvim-treesitter-context",
+  {
+    "terryma/vim-expand-region",
+    config = function()
+      vim.api.nvim_set_keymap("v", "<C-w>", "<Plug>(expand_region_expand)", { noremap = false, silent = true })
+      vim.api.nvim_set_keymap("v", "<C-S-w>", "<Plug>(expand_region_shrink)", { noremap = false, silent = true })
+    end,
+  },
   {
     "ahmedkhalf/project.nvim",
     config = function()
@@ -470,4 +478,17 @@ require("actions-preview").setup {
     ignore_whitespace = true,
   },
   telescope = require("telescope.themes").get_dropdown { winblend = 10 },
+}
+
+require("treesitter-context").setup {
+  enable = true,
+  max_lines = 0,
+  min_window_height = 0,
+  line_numbers = true,
+  multiline_threshold = 20,
+  trim_scope = "outer",
+  mode = "cursor",
+  separator = nil,
+  zindex = 20,
+  on_attach = nil,
 }
