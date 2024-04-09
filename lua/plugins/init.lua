@@ -1,10 +1,42 @@
--- All plugins have lazy=true by default,to load a plugin on startup just lazy=false
--- List of all default plugins & their definitions
 local default_plugins = {
   "nvim-lua/plenary.nvim",
   "ThePrimeagen/harpoon",
   "mhartington/formatter.nvim",
   "nvim-treesitter/nvim-treesitter-context",
+  { "sindrets/diffview.nvim", lazy = false },
+  {
+    "doums/darcula",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme "darcula"
+    end,
+  },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && yarn install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  },
+  {
+    "folke/todo-comments.nvim",
+    lazy = false,
+    config = function()
+      require("todo-comments").setup()
+    end,
+  },
+  {
+    "hedyhli/outline.nvim",
+    lazy = true,
+    cmd = { "Outline", "OutlineOpen" },
+    keys = { -- Example mapping to toggle outline
+      { "<leader>o", "<cmd>Outline<CR>", desc = "Toggle outline" },
+    },
+    opts = {},
+  },
   {
     "terryma/vim-expand-region",
     config = function()

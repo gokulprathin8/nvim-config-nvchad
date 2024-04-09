@@ -52,6 +52,9 @@ M.general = {
       end,
       "LSP formatting",
     },
+
+    ["<S-Up>"] = { ":m-2<CR>", "Move line up" },
+    ["<S-Down>"] = { ":m+<CR>", "Move line down" },
   },
 
   t = {
