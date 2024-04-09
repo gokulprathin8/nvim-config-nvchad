@@ -7,6 +7,12 @@ M.general = {
 
     ["=="] = { ":Mason<CR>", opts = { nowait = true } },
 
+    ["=ga"] = { ":G add -A<CR>", opts = { nowait = true } },
+
+    ["=gp"] = { ":G push<CR>", opts = { nowait = true } },
+
+    ["=gc"] = { ":G commit -m ", opts = { nowait = true } },
+
     ["<leader>cp"] = { ":Telescope neoclip<CR>", opts = { nowait = true } },
 
     ["=aa"] = { ":Format<CR>", opts = { nowait = true } },
