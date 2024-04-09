@@ -5,13 +5,13 @@ vim.opt.relativenumber = true
 
 -- Path to overriding theme and highlights files
 local highlights = require "custom.highlights"
-M.ui = {
-  theme = "doomchad",
-  theme_toggle = { "doomchad", "doomchad" },
-
-  hl_override = highlights.override,
-  hl_add = highlights.add,
-}
+-- M.ui = {
+--   theme = "chadracula",
+--   theme_toggle = { "chadracula", "chadracula" },
+--
+--   hl_override = highlights.override,
+--   hl_add = highlights.add,
+-- }
 
 M.plugins = "custom.plugins"
 

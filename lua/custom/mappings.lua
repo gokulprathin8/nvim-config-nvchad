@@ -7,11 +7,7 @@ M.general = {
 
     ["=="] = { ":Mason<CR>", opts = { nowait = true } },
 
-    ["<leader>cp"] = {
-      function()
-        require("neoclip").start()
-      end,
-    },
+    ["<leader>cp"] = { ":Telescope neoclip<CR>", opts = { nowait = true } },
 
     ["=aa"] = { ":Format<CR>", opts = { nowait = true } },
 
@@ -38,6 +34,8 @@ M.general = {
   },
   v = {
     [">"] = { ">gv", "indent" },
+    ["<S-Up>"] = { ":move '<-2<CR>gv=gv", "Move Lines up in V-Line" },
+    ["<S-Down>"] = { ":move '>+1<CR>gv=gv", "Move Lines down in V-Line" },
   },
 }
 

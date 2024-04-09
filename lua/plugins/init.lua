@@ -5,6 +5,34 @@ local default_plugins = {
   "nvim-treesitter/nvim-treesitter-context",
   { "sindrets/diffview.nvim", lazy = false },
   {
+    "tpope/vim-fugitive",
+    lazy = false,
+    opt = true,
+    cmd = {
+      "G",
+      "Git",
+      "Gdiffsplit",
+      "Gvdiffsplit",
+      "Gedit",
+      "Gsplit",
+      "Gread",
+      "Gwrite",
+      "Ggrep",
+      "Glgrep",
+      "Gmove",
+      "Gdelete",
+      "Gremove",
+      "Gbrowse",
+    },
+  },
+  {
+    "petertriho/nvim-scrollbar",
+    lazy = false,
+    config = function()
+      require("scrollbar").setup()
+    end,
+  },
+  {
     "doums/darcula",
     lazy = false,
     priority = 1000,
