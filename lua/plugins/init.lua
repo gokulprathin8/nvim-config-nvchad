@@ -427,7 +427,9 @@ local default_plugins = {
       require("core.utils").load_mappings "nvimtree"
     end,
     opts = function()
-      return require "plugins.configs.nvimtree"
+      local opts = require "plugins.configs.nvimtree"
+      opts.view.number = false
+      return opts
     end,
     config = function(_, opts)
       dofile(vim.g.base46_cache .. "nvimtree")
