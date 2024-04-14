@@ -20,3 +20,17 @@ vim.opt.guicursor = "n:block,i:block,r:block,c:block,v:block,a:block"
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 require "plugins"
+
+-- increase font size
+
+-- return should copy text in V-LINE
+vim.api.nvim_set_keymap("v", "<CR>", "y", { noremap = true })
+
+-- remapping dt to df for easy acess
+vim.api.nvim_set_keymap("n", "df", "dt", { noremap = true })
+
+-- remap window switch
+vim.api.nvim_set_keymap("n", "Q", "<C-w>", { noremap = true })
+
+-- remove highlight
+vim.api.nvim_set_keymap("n", "hh", ":noh<CR>", { noremap = true })

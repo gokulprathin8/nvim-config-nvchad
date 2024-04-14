@@ -76,6 +76,14 @@ require("lspconfig").gopls.setup {
       staticcheck = true,
       gofumpt = true,
     },
+    java = {
+      signatureHelp = { enabled = true },
+      completion = { enabled = true },
+      source = {
+        organizeImports = { enabled = true },
+        organizeMembers = { enabled = true },
+      },
+    },
   },
 }
 
@@ -106,5 +114,7 @@ require("lspconfig").pyright.setup {
     },
   },
 }
+
+require("lspconfig").tailwindcss.setup {}
 
 return M
