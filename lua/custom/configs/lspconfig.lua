@@ -5,8 +5,20 @@ local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-local servers =
-  { "html", "cssls", "tsserver", "clangd", "pyright", "gopls", "templ", "jdtls", "bashls", "jsonls", "tailwindcss" }
+local servers = {
+  "html",
+  "cssls",
+  "tsserver",
+  "clangd",
+  "pyright",
+  "gopls",
+  "templ",
+  "jdtls",
+  "bashls",
+  "jsonls",
+  "tailwindcss",
+  "emmet_ls",
+}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {

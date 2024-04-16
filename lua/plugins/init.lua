@@ -3,6 +3,7 @@ local default_plugins = {
   "ThePrimeagen/harpoon",
   "mhartington/formatter.nvim",
   "nvim-treesitter/nvim-treesitter-context",
+  "williamboman/nvim-lsp-installer",
   { "sindrets/diffview.nvim", lazy = false },
   {
     "tpope/vim-fugitive",
@@ -554,3 +555,5 @@ require("treesitter-context").setup {
   zindex = 20,
   on_attach = nil,
 }
+
+require("nvim-lsp-installer").setup {}
