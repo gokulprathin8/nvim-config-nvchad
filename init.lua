@@ -34,3 +34,23 @@ vim.api.nvim_set_keymap("n", "Q", "<C-w>", { noremap = true })
 
 -- remove highlight
 vim.api.nvim_set_keymap("n", "--", ":noh<CR>", { noremap = true })
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<Leader>rel",
+  ":lua copy_relative_path_under_cursor()<CR>",
+  { noremap = true, silent = true }
+)
+
+-- function to copy relative path from nvimtree
+local function copy_relative_path_under_cursor()
+  if vim.bo.filetype ~= "NvimTree" or vim.fn.win_gettype() ~= "nvim_tree" then
+    print "NvimTree is not open or focused."
+    return
+  end
+  local cursor_path = vim.fn.expand "%:p"
+  local root_path = vim.fn.nvim_tree_get_path()
+  local relative_path = vim.fn.fnamemodify(cursor_path, ":~:" .. root_path)
+  vim.fn.setreg("+", relative_path)
+  print("Relative path copied to clipboard:", relative_path)
+end
