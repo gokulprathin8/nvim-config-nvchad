@@ -33,4 +33,4 @@ vim.api.nvim_set_keymap("n", "df", "dt", { noremap = true })
 vim.api.nvim_set_keymap("n", "Q", "<C-w>", { noremap = true })
 
 -- remove highlight
-vim.api.nvim_set_keymap("n", "hh", ":noh<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "--", ":noh<CR>", { noremap = true })
