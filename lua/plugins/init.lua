@@ -49,6 +49,7 @@ local default_plugins = {
     config = function()
       vim.cmd.colorscheme "darcula-solid"
       vim.cmd "set termguicolors"
+      vim.cmd "highlight Visual guifg=#000000 guibg=#6495ED gui=none"
     end,
   },
   {
