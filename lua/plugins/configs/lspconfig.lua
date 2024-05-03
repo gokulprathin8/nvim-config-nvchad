@@ -117,6 +117,8 @@ require("lspconfig").pyright.setup {
 
 require("lspconfig").tailwindcss.setup {}
 
+require("lspconfig").emmet_langauge_server.setup {}
+
 -- emmet config
 M.capabilities.textDocument.completion.completionItem.snippetSupport = true
 require("lspconfig").emmet_ls.setup {

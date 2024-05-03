@@ -6,8 +6,8 @@ vim.opt.relativenumber = true
 -- Path to overriding theme and highlights files
 local highlights = require "custom.highlights"
 M.ui = {
-  theme = "dark_horizon",
-  theme_toggle = { "dark_horizon", "dark_horizon" },
+  theme = "chocolate",
+  theme_toggle = { "chocolate", "chocolate" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,

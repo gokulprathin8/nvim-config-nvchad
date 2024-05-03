@@ -4,6 +4,15 @@ local default_plugins = {
   "mhartington/formatter.nvim",
   "nvim-treesitter/nvim-treesitter-context",
   "williamboman/nvim-lsp-installer",
+  "alvan/vim-closetag",
+  "rktjmp/lush.nvim",
+  {
+    "briones-gabriel/darcula-solid.nvim",
+    config = function()
+      -- vim.cmd "colorscheme darcula-solid"
+      -- vim.cmd "set termguicolors"
+    end,
+  },
   { "sindrets/diffview.nvim", lazy = false },
   {
     "tpope/vim-fugitive",
@@ -38,7 +47,8 @@ local default_plugins = {
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme "darcula"
+      vim.cmd.colorscheme "darcula-solid"
+      vim.cmd "set termguicolors"
     end,
   },
   {
@@ -384,7 +394,6 @@ local default_plugins = {
           require("cmp").event:on("confirm_done", cmp_autopairs.on_confirm_done())
         end,
       },
-
       -- cmp sources plugins
       {
         "saadparwaiz1/cmp_luasnip",
