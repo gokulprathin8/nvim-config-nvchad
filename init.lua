@@ -35,6 +35,10 @@ vim.api.nvim_set_keymap("n", "Q", "<C-w>", { noremap = true })
 -- remove highlight
 vim.api.nvim_set_keymap("n", "--", ":noh<CR>", { noremap = true })
 
+-- faster arrow navigations
+vim.api.nvim_set_keymap("n", "<C-Left>", "b", { noremap = true })
+vim.api.nvim_set_keymap("n", "<C-Right>", "e", { noremap = true })
+
 vim.api.nvim_set_keymap(
   "n",
   "<Leader>rel",
