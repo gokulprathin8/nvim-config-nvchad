@@ -7,6 +7,16 @@ local default_plugins = {
   "alvan/vim-closetag",
   "rktjmp/lush.nvim",
   {
+    "ThePrimeagen/refactoring.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("refactoring").setup()
+    end,
+  },
+  {
     "briones-gabriel/darcula-solid.nvim",
     config = function()
       -- vim.cmd "colorscheme darcula-solid"
@@ -567,3 +577,6 @@ require("treesitter-context").setup {
 }
 
 require("nvim-lsp-installer").setup {}
+
+-- setup for refactoring
+require("refactoring").setup()

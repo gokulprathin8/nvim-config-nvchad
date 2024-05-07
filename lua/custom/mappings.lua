@@ -19,6 +19,14 @@ M.general = {
 
     ["<leader>ccc"] = { ":PickColor<CR>", opts = { nowait = true } },
 
+    ["<leader>rf"] = { ":Refactor extract<CR>", opts = { nowait = true } },
+
+    ["<leader>re"] = { ":Refactor extract<CR>", opts = { nowait = true } },
+
+    ["<leader>rv"] = { ":Refactor extract_var", opts = { nowait = true } },
+
+    ["<leader>rb"] = { ":Refactor extract_block", opts = { nowait = true } },
+
     ["<leader>="] = {
       function()
         require("harpoon.ui").toggle_quick_menu()
