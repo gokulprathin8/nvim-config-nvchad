@@ -19,14 +19,6 @@ M.general = {
 
     ["<leader>ccc"] = { ":PickColor<CR>", opts = { nowait = true } },
 
-    ["<leader>rf"] = { ":Refactor extract<CR>", opts = { nowait = true } },
-
-    ["<leader>re"] = { ":Refactor extract<CR>", opts = { nowait = true } },
-
-    ["<leader>rv"] = { ":Refactor extract_var", opts = { nowait = true } },
-
-    ["<leader>rb"] = { ":Refactor extract_block", opts = { nowait = true } },
-
     ["<leader>="] = {
       function()
         require("harpoon.ui").toggle_quick_menu()
@@ -48,8 +40,22 @@ M.general = {
   },
   v = {
     [">"] = { ">gv", "indent" },
+
     ["<S-Up>"] = { ":move '<-2<CR>gv=gv", "Move Lines up in V-Line" },
+
     ["<S-Down>"] = { ":move '>+1<CR>gv=gv", "Move Lines down in V-Line" },
+
+    ["<A-Up>"] = { ":move '<-2<CR>gv=gv", "Move Lines up in V-Line" },
+
+    ["<A-Down>"] = { ":move '>+1<CR>gv=gv", "Move Lines down in V-Line" },
+
+    ["<leader>rf"] = { ":Refactor extract<CR>", opts = { nowait = true } },
+
+    ["<leader>re"] = { ":Refactor extract<CR>", opts = { nowait = true } },
+
+    ["<leader>rv"] = { ":Refactor extract_var", opts = { nowait = true } },
+
+    ["<leader>rb"] = { ":Refactor extract_block", opts = { nowait = true } },
   },
 }
 

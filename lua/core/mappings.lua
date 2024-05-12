@@ -55,6 +55,9 @@ M.general = {
 
     ["<S-Up>"] = { ":m-2<CR>", "Move line up" },
     ["<S-Down>"] = { ":m+<CR>", "Move line down" },
+
+    ["<A-Up>"] = { ":m-2<CR>", "Move line up" },
+    ["<A-Down>"] = { ":m+<CR>", "Move line down" },
   },
 
   t = {
@@ -283,7 +286,11 @@ M.telescope = {
 
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
-    ["<leader>gt"] = { "<cmd> Telescope git_status <CR>", "Git status" },
+    ["<leader>gs"] = { "<cmd> Telescope git_status <CR>", "Git status" },
+    ["<leader>gb"] = { "<cmd> Telescope git_branches <CR>", "Git branches" },
+    ["=gb"] = { "<cmd> Telescope git_branches <CR>", "Git branches" },
+    ["=gs"] = { "<cmd> Telescope git_status <CR>", "Git status" },
+    ["pp"] = { "<cmd> Git pull <CR>", "Git pull" },
 
     -- pick a hidden term
     ["<leader>pt"] = { "<cmd> Telescope terms <CR>", "Pick hidden term" },
