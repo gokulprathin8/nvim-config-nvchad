@@ -5,6 +5,8 @@ M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
 
+    ["<CR>"] = { "o<Esc>", opts = { nowait = true } },
+
     ["=="] = { ":Mason<CR>", opts = { nowait = true } },
 
     ["=ga"] = { ":G add -A<CR>", opts = { nowait = true } },
