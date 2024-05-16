@@ -18,7 +18,7 @@ local servers = {
   "jsonls",
   "tailwindcss",
   "emmet_ls",
-  "emmet_language_server",
+  -- "emmet_language_server",
 }
 
 for _, lsp in ipairs(servers) do
