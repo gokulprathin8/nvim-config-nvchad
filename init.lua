@@ -35,6 +35,9 @@ vim.api.nvim_set_keymap("n", "Q", "<C-w>", { noremap = true })
 -- remove highlight
 vim.api.nvim_set_keymap("n", "--", ":noh<CR>", { noremap = true })
 
+-- vim key map for select line
+vim.api.nvim_set_keymap("n", "\\", "^v$", { noremap = true, silent = true })
+
 -- faster arrow navigations
 vim.api.nvim_set_keymap("n", "<C-Left>", "b", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-Right>", "e", { noremap = true })
@@ -58,3 +61,6 @@ local function copy_relative_path_under_cursor()
   vim.fn.setreg("+", relative_path)
   print("Relative path copied to clipboard:", relative_path)
 end
+
+-- add support for templ file extension
+vim.filetype.add { extension = { templ = "templ" } }

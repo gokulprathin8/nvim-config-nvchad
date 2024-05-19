@@ -61,6 +61,14 @@ require("lspconfig").lua_ls.setup {
   },
 }
 
+require("lspconfig").templ.setup {}
+
+require("lspconfig").html.setup {
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+  filetypes = { "html", "templ" },
+}
+
 require("lspconfig").gopls.setup {
   on_attach = M.on_attach,
   capabilities = M.capabilities,
@@ -115,7 +123,12 @@ require("lspconfig").pyright.setup {
   },
 }
 
-require("lspconfig").tailwindcss.setup {}
+require("lspconfig").tailwindcss.setup {
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+  filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+  init_options = { userLanguages = { templ = "html" } },
+}
 
 -- require("lspconfig").emmet_langauge_server.setup {}
 

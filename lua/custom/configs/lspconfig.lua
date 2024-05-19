@@ -18,6 +18,7 @@ local servers = {
   "jsonls",
   "tailwindcss",
   "emmet_ls",
+  "templ",
   -- "emmet_language_server",
 }
 
