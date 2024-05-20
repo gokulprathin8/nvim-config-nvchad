@@ -28,6 +28,15 @@ vim.api.nvim_set_keymap("v", "<CR>", "y", { noremap = true })
 
 -- remapping dt to df for easy acess
 vim.api.nvim_set_keymap("n", "df", "dt", { noremap = true })
+vim.api.nvim_set_keymap("n", "ds", "dT", { noremap = true })
+
+-- remmaping q to go to start of the line + remap to go to end of the line
+vim.api.nvim_set_keymap("n", "q", "^", { noremap = true })
+vim.api.nvim_set_keymap("n", "r", "$", { noremap = true })
+vim.api.nvim_set_keymap("o", "q", "^", { noremap = true })
+vim.api.nvim_set_keymap("o", "r", "$", { noremap = true })
+vim.api.nvim_set_keymap("x", "q", "^", { noremap = true })
+vim.api.nvim_set_keymap("x", "r", "$", { noremap = true })
 
 -- remap window switch
 vim.api.nvim_set_keymap("n", "Q", "<C-w>", { noremap = true })
