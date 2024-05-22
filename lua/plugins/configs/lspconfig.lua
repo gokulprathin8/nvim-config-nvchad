@@ -69,6 +69,10 @@ require("lspconfig").html.setup {
   filetypes = { "html", "templ" },
 }
 
+require("lspconfig").cmake.setup {}
+
+require("lspconfig").efm.setup {}
+
 require("lspconfig").gopls.setup {
   on_attach = M.on_attach,
   capabilities = M.capabilities,

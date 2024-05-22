@@ -19,6 +19,8 @@ local servers = {
   "tailwindcss",
   "emmet_ls",
   "templ",
+  "cmake",
+  "efm",
   -- "emmet_language_server",
 }
 
