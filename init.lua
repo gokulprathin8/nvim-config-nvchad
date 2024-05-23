@@ -29,6 +29,8 @@ vim.api.nvim_set_keymap("v", "<CR>", "y", { noremap = true })
 -- remapping dt to df for easy acess
 vim.api.nvim_set_keymap("n", "df", "dt", { noremap = true })
 vim.api.nvim_set_keymap("n", "ds", "dT", { noremap = true })
+vim.api.nvim_set_keymap("n", "dff", "d1f", { noremap = true })
+vim.api.nvim_set_keymap("n", "dss", "d1F", { noremap = true })
 
 -- remmaping q to go to start of the line + remap to go to end of the line
 vim.api.nvim_set_keymap("n", "q", "^", { noremap = true })

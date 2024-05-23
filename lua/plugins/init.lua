@@ -7,6 +7,12 @@ local default_plugins = {
   "alvan/vim-closetag",
   "rktjmp/lush.nvim",
   {
+    "wintermute-cell/gitignore.nvim",
+    config = function()
+      require("gitignore").setup()
+    end,
+  },
+  {
     "ThePrimeagen/refactoring.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
@@ -117,26 +123,26 @@ local default_plugins = {
       }
     end,
   },
-  {
-    "chrisgrieser/nvim-tinygit",
-    ft = { "gitrebase", "gitcommit" }, -- so ftplugins are loaded
-    dependencies = {
-      "stevearc/dressing.nvim",
-      "nvim-telescope/telescope.nvim", -- either telescope or fzf-lua
-      -- "ibhagwan/fzf-lua",
-      "rcarriga/nvim-notify", -- optional, but will lack some features without it
-    },
-    config = function()
-      require("tinygit").smartCommit { pushIfClean = false }
-      vim.keymap.set("n", "<leader>ga", "<cmd>Gitsigns add_hunk<CR>") -- gitsigns.nvim
-      vim.keymap.set("n", "<leader>gc", function()
-        require("tinygit").smartCommit()
-      end)
-      vim.keymap.set("n", "<leader>gp", function()
-        require("tinygit").push()
-      end)
-    end,
-  },
+  -- {
+  --   "chrisgrieser/nvim-tinygit",
+  --   ft = { "gitrebase", "gitcommit" }, -- so ftplugins are loaded
+  --   dependencies = {
+  --     "stevearc/dressing.nvim",
+  --     "nvim-telescope/telescope.nvim", -- either telescope or fzf-lua
+  --     -- "ibhagwan/fzf-lua",
+  --     "rcarriga/nvim-notify", -- optional, but will lack some features without it
+  --   },
+  --   config = function()
+  --     require("tinygit").smartCommit { pushIfClean = false }
+  --     vim.keymap.set("n", "<leader>ga", "<cmd>Gitsigns add_hunk<CR>") -- gitsigns.nvim
+  --     vim.keymap.set("n", "<leader>gc", function()
+  --       require("tinygit").smartCommit()
+  --     end)
+  --     vim.keymap.set("n", "<leader>gp", function()
+  --       require("tinygit").push()
+  --     end)
+  --   end,
+  -- },
   {
     "f-person/git-blame.nvim",
     config = function()

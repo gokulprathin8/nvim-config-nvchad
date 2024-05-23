@@ -13,7 +13,7 @@ M.general = {
 
     ["=gp"] = { ":G push<CR>", opts = { nowait = true } },
 
-    ["=gc"] = { ":G commit -m ", opts = { nowait = true } },
+    ["=gc"] = { ":G commit<CR>", opts = { nowait = true } },
 
     ["<leader>cp"] = { ":Telescope neoclip<CR>", opts = { nowait = true } },
 
