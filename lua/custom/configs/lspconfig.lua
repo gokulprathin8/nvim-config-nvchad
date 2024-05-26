@@ -21,6 +21,7 @@ local servers = {
   "templ",
   "cmake",
   "efm",
+  "omnisharp",
   -- "emmet_language_server",
 }
 

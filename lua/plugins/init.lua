@@ -6,6 +6,7 @@ local default_plugins = {
   "williamboman/nvim-lsp-installer",
   "alvan/vim-closetag",
   "rktjmp/lush.nvim",
+  "OmniSharp/omnisharp-vim",
   {
     "wintermute-cell/gitignore.nvim",
     config = function()

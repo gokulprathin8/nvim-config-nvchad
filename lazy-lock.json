@@ -41,6 +41,7 @@
   "nvim-treesitter-context": { "branch": "master", "commit": "2650e6431f7daba5d9c2c64134fa5eb2312eb3d7" },
   "nvim-web-devicons": { "branch": "master", "commit": "794bba734ec95eaff9bb82fbd112473be2087283" },
   "nvterm": { "branch": "main", "commit": "9d7ba3b6e368243175d38e1ec956e0476fd86ed9" },
+  "omnisharp-vim": { "branch": "master", "commit": "f9c5d3e3375e8b5688a4506e813cb21bdc7329b1" },
   "outline.nvim": { "branch": "main", "commit": "dbd836893fb99cfc33119d7c4abbdb700210f54b" },
   "plenary.nvim": { "branch": "master", "commit": "08e301982b9a057110ede7a735dd1b5285eb341f" },
   "project.nvim": { "branch": "main", "commit": "8c6bad7d22eef1b71144b401c9f74ed01526a4fb" },
@@ -53,6 +54,5 @@
   "vim-closetag": { "branch": "master", "commit": "d0a562f8bdb107a50595aefe53b1a690460c3822" },
   "vim-expand-region": { "branch": "master", "commit": "966513543de0ddc2d673b5528a056269e7917276" },
   "vim-fugitive": { "branch": "master", "commit": "ce882460cf3db12e99f8bf579cbf99e331f6dd4f" },
-  "vim-sneak": { "branch": "master", "commit": "c13d0497139b8796ff9c44ddb9bc0dc9770ad2dd" },
   "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" }
 }

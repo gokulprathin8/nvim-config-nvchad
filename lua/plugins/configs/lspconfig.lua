@@ -73,6 +73,14 @@ require("lspconfig").cmake.setup {}
 
 require("lspconfig").efm.setup {}
 
+local pid = vim.fn.getpid()
+local omnisharp_bin = "/usr/local/bin/omnisharp-roslyn/OmniSharp"
+require("lspconfig").omnisharp.setup {
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+  cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid) },
+}
+
 require("lspconfig").gopls.setup {
   on_attach = M.on_attach,
   capabilities = M.capabilities,
