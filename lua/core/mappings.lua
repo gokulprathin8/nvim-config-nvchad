@@ -292,6 +292,8 @@ M.telescope = {
     ["=gs"] = { "<cmd> Telescope git_status <CR>", "Git status" },
     ["=pp"] = { "<cmd> Git pull <CR>", "Git pull" },
 
+    ["1"] = { "ddko" },
+
     -- pick a hidden term
     ["<leader>pt"] = { "<cmd> Telescope terms <CR>", "Pick hidden term" },
 
