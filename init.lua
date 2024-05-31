@@ -27,6 +27,17 @@ require "plugins"
 vim.api.nvim_set_keymap("v", "<CR>", "y", { noremap = true })
 
 -- remapping dt to df for easy acess
+--
+vim.api.nvim_set_keymap("n", "ds", "dT", { noremap = true })
+vim.api.nvim_set_keymap("n", "dff", "d1f", { noremap = true })
+vim.api.nvim_set_keymap("n", "dss", "d1F", { noremap = true })
+
+vim.api.nvim_set_keymap("n", "q", "^", { noremap = true })
+vim.api.nvim_set_keymap("n", "r", "$", { noremap = true })
+vim.api.nvim_set_keymap("o", "q", "^", { noremap = true })
+vim.api.nvim_set_keymap("o", "r", "$", { noremap = true })
+vim.api.nvim_set_keymap("x", "q", "^", { noremap = true })
+vim.api.nvim_set_keymap("x", "r", "$", { noremap = true })
 vim.api.nvim_set_keymap("n", "df", "dt", { noremap = true })
 vim.api.nvim_set_keymap("n", "ds", "dT", { noremap = true })
 vim.api.nvim_set_keymap("n", "dff", "d1f", { noremap = true })

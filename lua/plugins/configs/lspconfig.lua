@@ -71,7 +71,7 @@ require("lspconfig").html.setup {
 
 require("lspconfig").cmake.setup {}
 
--- require("lspconfig").efm.setup {}
+require("lspconfig").efm.setup {}
 
 local pid = vim.fn.getpid()
 local omnisharp_bin = "/usr/local/bin/omnisharp-roslyn/OmniSharp"
