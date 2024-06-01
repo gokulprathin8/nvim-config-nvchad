@@ -34,9 +34,7 @@ M.general = {
     },
     --  format with conform
     ["<leader>fm"] = {
-      function()
-        require("conform").format()
-      end,
+      function() end,
       "formatting",
     },
   },
