@@ -8,6 +8,38 @@ local default_plugins = {
   "rktjmp/lush.nvim",
   "OmniSharp/omnisharp-vim",
   {
+    "briones-gabriel/darcula-solid.nvim",
+    config = function()
+      vim.cmd "colorscheme darcula-solid"
+    end,
+  },
+  {
+    "kawre/leetcode.nvim",
+    cmd = "Leet",
+    build = ":TSUpdate html",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "rcarriga/nvim-notify",
+      "nvim-tree/nvim-web-devicons",
+    },
+    opts = {
+      arg = "leetcode.nvim",
+      lang = "python3",
+      logging = "true",
+      injector = {
+        ["python3"] = {
+          before = true,
+        },
+      },
+    },
+    config = function()
+      require("leetcode").setup()
+    end,
+  },
+  {
     "wintermute-cell/gitignore.nvim",
     config = function()
       require("gitignore").setup()
@@ -21,12 +53,6 @@ local default_plugins = {
     },
     config = function()
       require("refactoring").setup()
-    end,
-  },
-  {
-    "briones-gabriel/darcula-solid.nvim",
-    config = function()
-      vim.cmd "colorscheme darcula-solid"
     end,
   },
   { "sindrets/diffview.nvim", lazy = false },
