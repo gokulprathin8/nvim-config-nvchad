@@ -8,6 +8,17 @@ local default_plugins = {
   "rktjmp/lush.nvim",
   "OmniSharp/omnisharp-vim",
   {
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    config = function()
+      require("lspsaga").setup {}
+    end,
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+  },
+  {
     "briones-gabriel/darcula-solid.nvim",
     config = function()
       vim.cmd "colorscheme darcula-solid"

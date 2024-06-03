@@ -129,6 +129,7 @@ require("lspconfig").pyright.setup {
       analysis = {
         autoSearchPaths = true,
         diagnosticMode = "openFilesOnly",
+        autoImportCompletions = true,
         useLibraryCodeForTypes = true,
       },
     },
