@@ -117,24 +117,36 @@ require("lspconfig").gopls.setup {
 --   },
 -- }
 
-require("lspconfig").pyright.setup {
-  on_attach = M.on_attach,
-  capabilities = M.capabilities,
+require("lspsaga").setup {}
 
-  cmd = { "pyright-langserver", "--stdio" },
-  filetypes = "python",
-  single_file_support = true,
+require("lspconfig").basedpyright.setup {
+  capabilities = M.capabilities,
+  on_attach = M.on_attach,
   settings = {
-    python = {
-      analysis = {
-        autoSearchPaths = true,
-        diagnosticMode = "openFilesOnly",
-        autoImportCompletions = true,
-        useLibraryCodeForTypes = true,
-      },
+    basedpyright = {
+      typeCheckingMode = "standard",
     },
   },
 }
+
+-- require("lspconfig").pyright.setup {
+--   on_attach = M.on_attach,
+--   capabilities = M.capabilities,
+--
+--   cmd = { "pyright-langserver", "--stdio" },
+--   filetypes = "python",
+--   single_file_support = true,
+--   settings = {
+--     python = {
+--       analysis = {
+--         autoSearchPaths = true,
+--         diagnosticMode = "openFilesOnly",
+--         autoImportCompletions = true,
+--         useLibraryCodeForTypes = true,
+--       },
+--     },
+--   },
+-- }
 
 require("lspconfig").tailwindcss.setup {
   on_attach = M.on_attach,
