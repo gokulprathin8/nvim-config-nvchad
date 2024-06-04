@@ -8,6 +8,39 @@ local default_plugins = {
   "rktjmp/lush.nvim",
   "OmniSharp/omnisharp-vim",
   {
+    "github/copilot.vim",
+    lazy = false,
+    config = function() -- Mapping tab is already used by NvChad
+      vim.g.copilot_no_tab_map = true
+      vim.g.copilot_assume_mapped = true
+      vim.g.copilot_tab_fallback = ""
+      -- The mapping is set to other key, see custom/lua/mappings
+      -- or run <leader>ch to see copilot mapping section
+    end,
+  },
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- add any options here
+    },
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      {
+        "rcarriga/nvim-notify",
+        config = function()
+          require("notify").setup {
+            top_down = false,
+          }
+        end,
+      },
+    },
+  },
+  {
     "glepnir/lspsaga.nvim",
     branch = "main",
     dependencies = {
