@@ -11,7 +11,7 @@ local servers = {
   "tsserver",
   "clangd",
   -- "pyright",
-  -- "basedpyright",
+  "basedpyright",
   "gopls",
   "templ",
   "jdtls",

@@ -124,7 +124,8 @@ require("lspconfig").basedpyright.setup {
   on_attach = M.on_attach,
   settings = {
     basedpyright = {
-      typeCheckingMode = "standard",
+      typeCheckingMode = "off",
+      -- reportUnknownVariableType = false,
     },
   },
 }

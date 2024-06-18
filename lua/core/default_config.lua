@@ -10,8 +10,8 @@ M.ui = {
   hl_add = {},
   hl_override = {},
   changed_themes = {},
-  theme_toggle = { "darcula-solid", "one_light" },
-  theme = "darcula-solid", -- default theme
+  theme = "dark_horizon",
+  theme_toggle = { "dark_horizon", "dark_horizon" },
   transparency = false,
   lsp_semantic_tokens = false, -- needs nvim v0.9, just adds highlight groups for lsp semantic tokens
 
