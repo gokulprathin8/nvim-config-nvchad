@@ -6,11 +6,11 @@ vim.opt.relativenumber = true
 -- Path to overriding theme and highlights files
 local highlights = require "custom.highlights"
 M.ui = {
-  -- theme = "gatekeeper",
-  -- theme_toggle = { "gatekeeper", "gatekeeper" },
+  theme = "vscode_dark",
+  theme_toggle = { "vscode_dark", "vscode_dark" },
 
-  -- hl_override = highlights.override,
-  -- hl_add = highlights.add,
+  hl_override = highlights.override,
+  hl_add = highlights.add,
 }
 
 M.plugins = "custom.plugins"

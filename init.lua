@@ -87,4 +87,4 @@ end
 -- add support for templ file extension
 vim.filetype.add { extension = { templ = "templ" } }
 
-vim.cmd "colorscheme darcula-solid"
+-- vim.cmd "colorscheme darcula-solid"

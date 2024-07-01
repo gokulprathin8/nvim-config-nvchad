@@ -9,9 +9,9 @@ local utils = require "core.utils"
 M.on_attach = function(client, bufnr)
   utils.load_mappings("lspconfig", { buffer = bufnr })
 
-  if client.server_capabilities.signatureHelpProvider then
-    require("nvchad.signature").setup(client)
-  end
+  -- if client.server_capabilities.signatureHelpProvider then
+  --   require("nvchad.signature").setup(client)
+  -- end
 
   if not utils.load_config().ui.lsp_semantic_tokens and client.supports_method "textDocument/semanticTokens" then
     client.server_capabilities.semanticTokensProvider = nil
@@ -119,35 +119,30 @@ require("lspconfig").gopls.setup {
 
 require("lspsaga").setup {}
 
-require("lspconfig").basedpyright.setup {
-  capabilities = M.capabilities,
-  on_attach = M.on_attach,
-  settings = {
-    basedpyright = {
-      typeCheckingMode = "off",
-      -- reportUnknownVariableType = false,
-    },
-  },
-}
-
--- require("lspconfig").pyright.setup {
---   on_attach = M.on_attach,
+-- require("lspconfig").basedpyright.setup {
 --   capabilities = M.capabilities,
---
---   cmd = { "pyright-langserver", "--stdio" },
---   filetypes = "python",
---   single_file_support = true,
+--   on_attach = M.on_attach,
 --   settings = {
---     python = {
---       analysis = {
---         autoSearchPaths = true,
---         diagnosticMode = "openFilesOnly",
---         autoImportCompletions = true,
---         useLibraryCodeForTypes = true,
---       },
+--     basedpyright = {
+--       typeCheckingMode = "basic",
+--       logLevel = "error",
 --     },
 --   },
 -- }
+
+require("lspconfig").pyright.setup {
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+
+  cmd = { "pyright-langserver", "--stdio" },
+  filetypes = "python",
+  single_file_support = true,
+  settings = {
+    python = {
+      typeCheckingMode = "basic",
+    },
+  },
+}
 
 require("lspconfig").tailwindcss.setup {
   on_attach = M.on_attach,

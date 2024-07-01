@@ -51,7 +51,7 @@ local default_plugins = {
   {
     "briones-gabriel/darcula-solid.nvim",
     config = function()
-      vim.cmd "colorscheme darcula-solid"
+      -- vim.cmd "colorscheme darcula-solid"
     end,
   },
   {
@@ -130,9 +130,9 @@ local default_plugins = {
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme "darcula-solid"
-      vim.cmd "set termguicolors"
-      vim.cmd "highlight Visual guifg=#000000 guibg=#6495ED gui=none"
+      -- vim.cmd.colorscheme "darcula-solid"
+      -- vim.cmd "set termguicolors"
+      -- vim.cmd "highlight Visual guifg=#000000 guibg=#6495ED gui=none"
     end,
   },
   {
@@ -655,8 +655,8 @@ require("nvim-lsp-installer").setup {}
 require("refactoring").setup()
 
 -- Set background to dark and enable true color support
-vim.opt.background = "light"
-vim.opt.termguicolors = true
+-- vim.opt.background = "light"
+-- vim.opt.termguicolors = true
 
 -- Load the color scheme
-vim.cmd "colorscheme darcula-solid"
+-- vim.cmd "colorscheme darcula-solid"
