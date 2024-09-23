@@ -8,6 +8,14 @@ local default_plugins = {
   "rktjmp/lush.nvim",
   "OmniSharp/omnisharp-vim",
   {
+    "karb94/neoscroll.nvim",
+    config = function()
+      require("neoscroll").setup {
+        easing = "quadratic",
+      }
+    end,
+  },
+  {
     "github/copilot.vim",
     lazy = false,
     config = function() -- Mapping tab is already used by NvChad
