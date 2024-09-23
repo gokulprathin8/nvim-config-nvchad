@@ -8,12 +8,10 @@ local default_plugins = {
   "rktjmp/lush.nvim",
   "OmniSharp/omnisharp-vim",
   {
+    "supermaven-inc/supermaven-nvim",
+  },
+  {
     "karb94/neoscroll.nvim",
-    config = function()
-      require("neoscroll").setup {
-        easing = "quadratic",
-      }
-    end,
   },
   {
     "github/copilot.vim",
@@ -661,6 +659,25 @@ require("nvim-lsp-installer").setup {}
 
 -- setup for refactoring
 require("refactoring").setup()
+
+require("supermaven-nvim").setup {
+  keymaps = {
+    accept_suggestion = "<Tab>",
+    clear_suggestion = "<C-]>",
+    accept_word = "<C-j>",
+  },
+  ignore_filetypes = { cpp = true }, -- or { "cpp", }
+  color = {
+    suggestion_color = "#D3D3D3",
+    cterm = 244,
+  },
+  log_level = "info", -- set to "off" to disable logging completely
+  disable_inline_completion = false, -- disables inline completion for use with cmp
+  disable_keymaps = false, -- disables built in keymaps for more manual control
+  condition = function()
+    return false
+  end,
+}
 
 -- Set background to dark and enable true color support
 -- vim.opt.background = "light"

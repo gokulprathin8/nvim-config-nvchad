@@ -71,6 +71,20 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true }
 )
 
+-- Define the actual SupermavenToggle command
+vim.api.nvim_create_user_command("SupermavenToggle", function()
+  -- Your logic to toggle Supermaven
+  print "Supermaven toggled!"
+end, {})
+
+-- Create the command 'Supa' (with an uppercase letter)
+vim.api.nvim_create_user_command("Supa", function()
+  vim.cmd "SupermavenToggle" -- Executes the SupermavenToggle command
+end, {})
+
+-- Optional: If you still want to use ':supa' in lowercase, you can map it with this workaround
+vim.cmd "cnoreabbrev supa Supa" -- This makes :supa map to :Supa
+
 -- function to copy relative path from nvimtree
 local function copy_relative_path_under_cursor()
   if vim.bo.filetype ~= "NvimTree" or vim.fn.win_gettype() ~= "nvim_tree" then
