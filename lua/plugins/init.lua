@@ -13,17 +13,17 @@ local default_plugins = {
   {
     "karb94/neoscroll.nvim",
   },
-  {
-    "github/copilot.vim",
-    lazy = false,
-    config = function() -- Mapping tab is already used by NvChad
-      vim.g.copilot_no_tab_map = true
-      vim.g.copilot_assume_mapped = true
-      vim.g.copilot_tab_fallback = ""
-      -- The mapping is set to other key, see custom/lua/mappings
-      -- or run <leader>ch to see copilot mapping section
-    end,
-  },
+  -- {
+  --   "github/copilot.vim",
+  --   lazy = false,
+  --   config = function() -- Mapping tab is already used by NvChad
+  --     vim.g.copilot_no_tab_map = true
+  --     vim.g.copilot_assume_mapped = true
+  --     vim.g.copilot_tab_fallback = ""
+  --     -- The mapping is set to other key, see custom/lua/mappings
+  --     -- or run <leader>ch to see copilot mapping section
+  --   end,
+  -- },
   -- {
   --   "folke/noice.nvim",
   --   event = "VeryLazy",
@@ -225,12 +225,13 @@ local default_plugins = {
       vim.g.gitblame_display_virtual_text = 0 -- Disable virtual text
     end,
   },
-  {
-    "aznhe21/actions-preview.nvim",
-    config = function()
-      vim.keymap.set({ "v", "n" }, "gf", require("actions-preview").code_actions)
-    end,
-  },
+  -- disable the bulb icon
+  -- {
+  --   "aznhe21/actions-preview.nvim",
+  --   config = function()
+  --     vim.keymap.set({ "v", "n" }, "gf", require("actions-preview").code_actions)
+  --   end,
+  -- },
   {
     "nvimdev/dashboard-nvim",
     event = "VimEnter",
@@ -634,13 +635,13 @@ autocmd("BufWritePost", {
   command = ":FormatWrite",
 })
 
-require("actions-preview").setup {
-  diff = {
-    algorithm = "patience",
-    ignore_whitespace = true,
-  },
-  telescope = require("telescope.themes").get_dropdown { winblend = 10 },
-}
+-- require("actions-preview").setup {
+--   diff = {
+--     algorithm = "patience",
+--     ignore_whitespace = true,
+--   },
+--   telescope = require("telescope.themes").get_dropdown { winblend = 10 },
+-- }
 
 require("treesitter-context").setup {
   enable = true,
