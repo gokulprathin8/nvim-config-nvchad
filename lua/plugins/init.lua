@@ -225,13 +225,12 @@ local default_plugins = {
       vim.g.gitblame_display_virtual_text = 0 -- Disable virtual text
     end,
   },
-  -- disable the bulb icon
-  -- {
-  --   "aznhe21/actions-preview.nvim",
-  --   config = function()
-  --     vim.keymap.set({ "v", "n" }, "gf", require("actions-preview").code_actions)
-  --   end,
-  -- },
+  {
+    "aznhe21/actions-preview.nvim",
+    config = function()
+      vim.keymap.set({ "v", "n" }, "gf", require("actions-preview").code_actions)
+    end,
+  },
   {
     "nvimdev/dashboard-nvim",
     event = "VimEnter",
@@ -635,13 +634,13 @@ autocmd("BufWritePost", {
   command = ":FormatWrite",
 })
 
--- require("actions-preview").setup {
---   diff = {
---     algorithm = "patience",
---     ignore_whitespace = true,
---   },
---   telescope = require("telescope.themes").get_dropdown { winblend = 10 },
--- }
+require("actions-preview").setup {
+  diff = {
+    algorithm = "patience",
+    ignore_whitespace = true,
+  },
+  telescope = require("telescope.themes").get_dropdown { winblend = 10 },
+}
 
 require("treesitter-context").setup {
   enable = true,
