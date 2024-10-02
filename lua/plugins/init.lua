@@ -13,6 +13,9 @@ local default_plugins = {
   {
     "karb94/neoscroll.nvim",
   },
+  {
+    "windwp/nvim-ts-autotag",
+  },
   -- {
   --   "github/copilot.vim",
   --   lazy = false,
@@ -659,6 +662,14 @@ require("nvim-lsp-installer").setup {}
 
 -- setup for refactoring
 require("refactoring").setup()
+
+require("nvim-ts-autotag").setup {
+  opts = {
+    enable_close = true,
+    enable_rename = true,
+    enable_close_on_slash = true,
+  },
+}
 
 require("supermaven-nvim").setup {
   keymaps = {
