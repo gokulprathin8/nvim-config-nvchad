@@ -682,7 +682,7 @@ require("nvim-ts-autotag").setup {
 
 require("supermaven-nvim").setup {
   keymaps = {
-    accept_suggestion = "<Tab>",
+    accept_suggestion = "<C-l>",
     clear_suggestion = "<C-]>",
     accept_word = "<C-j>",
   },
@@ -700,7 +700,7 @@ require("supermaven-nvim").setup {
 }
 
 require("neoscroll").setup()
-neoscroll = require "neoscroll"
+local neoscroll = require "neoscroll"
 local keymap = {
   ["<C-u>"] = function()
     neoscroll.ctrl_u { duration = 250 }
