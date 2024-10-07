@@ -16,6 +16,15 @@ local default_plugins = {
   {
     "windwp/nvim-ts-autotag",
   },
+  {
+    "gen740/SmoothCursor.nvim",
+    config = function()
+      require("smoothcursor").setup()
+    end,
+  },
+  {
+    "yuttie/comfortable-motion.vim",
+  },
   -- {
   --   "github/copilot.vim",
   --   lazy = false,
