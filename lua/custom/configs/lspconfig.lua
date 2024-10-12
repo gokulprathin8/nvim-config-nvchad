@@ -8,7 +8,8 @@ local lspconfig = require "lspconfig"
 local servers = {
   "html",
   "cssls",
-  "ts_ls",
+  "tsserver",
+  -- "ts_ls",
   "clangd",
   "pyright",
   -- "basedpyright",

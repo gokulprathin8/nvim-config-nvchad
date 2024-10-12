@@ -23,6 +23,9 @@ require "plugins"
 
 -- increase font size
 
+-- exist terminal mode to normal mode using esc key
+vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-N>", { noremap = true })
+
 -- return should copy text in V-LINE
 vim.api.nvim_set_keymap("v", "<CR>", "y", { noremap = true })
 
