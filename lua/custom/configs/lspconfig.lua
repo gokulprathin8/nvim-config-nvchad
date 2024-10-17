@@ -24,6 +24,7 @@ local servers = {
   "cmake",
   "efm",
   "omnisharp",
+  "prismals",
   -- "emmet_language_server",
 }
 

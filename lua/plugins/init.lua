@@ -2,7 +2,7 @@ local default_plugins = {
   "nvim-lua/plenary.nvim",
   "ThePrimeagen/harpoon",
   "mhartington/formatter.nvim",
-  "nvim-treesitter/nvim-treesitter-context",
+  -- "nvim-treesitter/nvim-treesitter-context",
   "williamboman/nvim-lsp-installer",
   "alvan/vim-closetag",
   "rktjmp/lush.nvim",
@@ -654,18 +654,18 @@ require("actions-preview").setup {
   telescope = require("telescope.themes").get_dropdown { winblend = 10 },
 }
 
-require("treesitter-context").setup {
-  enable = true,
-  max_lines = 0,
-  min_window_height = 0,
-  line_numbers = true,
-  multiline_threshold = 20,
-  trim_scope = "outer",
-  mode = "cursor",
-  separator = nil,
-  zindex = 20,
-  on_attach = nil,
-}
+-- require("treesitter-context").setup {
+--   enable = true,
+--   max_lines = 0,
+--   min_window_height = 0,
+--   line_numbers = true,
+--   multiline_threshold = 20,
+--   trim_scope = "outer",
+--   mode = "cursor",
+--   separator = nil,
+--   zindex = 20,
+--   on_attach = nil,
+-- }
 
 require("nvim-lsp-installer").setup {}
 
