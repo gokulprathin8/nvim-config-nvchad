@@ -28,7 +28,12 @@ vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-N>", { noremap = true })
 
 -- return should copy text in V-LINE
 vim.api.nvim_set_keymap("v", "<CR>", "y", { noremap = true })
-
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>fm",
+  ":lua vim.lsp.buf.format({ async = true })<CR>",
+  { noremap = true, silent = true }
+)
 -- remapping dt to df for easy acess
 --
 vim.api.nvim_set_keymap("n", "ds", "dT", { noremap = true })
@@ -105,3 +110,9 @@ end
 vim.filetype.add { extension = { templ = "templ" } }
 
 -- vim.cmd "colorscheme darcula-solid"
+
+vim.api.nvim_set_keymap("i", "<M-BS>", "<C-w>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("c", "<M-BS>", "<C-w>", { noremap = true, silent = true })
+
+vim.opt.timeoutlen = 10
+vim.opt.ttimeoutlen = 0
